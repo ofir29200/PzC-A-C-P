@@ -38,7 +38,9 @@ public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin
     {
       Player player = (Player)sender;
       
+	  player.sendMessage(ChatColor.RED + "you dont have permission to shutdown the server);
       org.bukkit.Bukkit.broadcastMessage(ChatColor.RED + "[Admin Commands] " + "The player " + ChatColor.GREEN + player.getName() + ChatColor.RED + " tried to shut down the server");
+	  
       returnAnswer = true;
     }
     

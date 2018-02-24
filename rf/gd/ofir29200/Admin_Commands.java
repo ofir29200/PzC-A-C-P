@@ -58,6 +58,7 @@ public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin
         player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
         player.setMaxHealth(100.0D);
         player.setHealth(100.0D);
+		player.sendMessage(ChatColor.GREEN + "Done!"
       }
       else
       {

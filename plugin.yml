@@ -1,0 +1,19 @@
+name: Admin_Commands
+main: rf.gd.ofir29200.Admin_Commands
+version: 2.0
+commands:
+   lag:
+      description: check you lag with the server
+      usage: /lag
+   shutdown:
+      description: admin command (not for players)
+      usage: /shutdown
+   override:
+      description: admin command (not for players)
+      usage: /override on/off
+   apply:
+      description: get a link to apply to the server
+      usage: /apply
+   discord:
+      description: get a link to join our discord server
+      usage: /discord

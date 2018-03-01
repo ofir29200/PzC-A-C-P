@@ -1,6 +1,6 @@
 name: Admin_Commands
 main: rf.gd.ofir29200.Admin_Commands
-version: 2.0
+version: 3.0
 commands:
    lag:
       description: check you lag with the server
@@ -14,6 +14,6 @@ commands:
    apply:
       description: get a link to apply to the server
       usage: /apply
-   discord:
+   join-discord:
       description: get a link to join our discord server
-      usage: /discord
+      usage: /join-discord

@@ -2,22 +2,25 @@ package rf.gd.ofir29200;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
 
-public class Commands {
+import net.minecraft.server.v1_8_R3.CommandExecute;
 
-	
-	
-	public Commands(Admin_Commands admin_Commands) {
-		// TODO Auto-generated constructor stub
-	}
+public class Commands extends CommandExecute implements Listener,CommandExecutor {
 
+	public static String cmd1 = "lag";
+	public static String cmd2 = "shutdown";
+	public static String cmd3 = "override";
+	public static String cmd4 = "apply";
+	public static String cmd5 = "join-discord";
+	//public String cmd6 = "for later on";
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
 	    boolean returnAnswer = false;
-	    
-	    if ((cmd.getName().equalsIgnoreCase("lag")) && ((sender instanceof Player)))
+	    if ((cmd.getName().equalsIgnoreCase(cmd1)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	      
@@ -27,7 +30,7 @@ public class Commands {
 	      
 	      returnAnswer = true;
 	    }
-	    else if ((cmd.getName().equalsIgnoreCase("shutdown")) && ((sender instanceof Player)))
+	    else if ((cmd.getName().equalsIgnoreCase(cmd2)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	     
@@ -35,7 +38,7 @@ public class Commands {
 	      returnAnswer = true;
 	    }
 	    
-	    if ((cmd.getName().equalsIgnoreCase("override")) && ((sender instanceof Player)))
+	    if ((cmd.getName().equalsIgnoreCase(cmd3)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	      	      
@@ -101,7 +104,7 @@ public class Commands {
 	      }
 	            returnAnswer = true;
 		  
-		  if 	((cmd.getName().equalsIgnoreCase("apply")) && ((sender instanceof Player)))
+		  if 	((cmd.getName().equalsIgnoreCase(cmd4)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	      
@@ -110,7 +113,7 @@ public class Commands {
 	      returnAnswer = true;
 	    }
 		  
-		  if ((cmd.getName().equalsIgnoreCase("join-discord")) && ((sender instanceof Player)))
+		  if ((cmd.getName().equalsIgnoreCase(cmd5)) && ((sender instanceof Player)))
 		    {
 		      Player player = (Player)sender;
 		      

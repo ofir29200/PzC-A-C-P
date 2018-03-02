@@ -119,7 +119,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		      
 			  player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://discord.gg/azYQwa6 to join our discord");
 		      
-		      returnAnswer = true;
+			  returnAnswer = true;
 		    }
 		  
 	    return returnAnswer;

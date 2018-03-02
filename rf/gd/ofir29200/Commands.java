@@ -30,7 +30,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	      
 	      returnAnswer = true;
 	    }
-	    if ((cmd.getName().equalsIgnoreCase(cmd2)) && ((sender instanceof Player)))
+	    else if ((cmd.getName().equalsIgnoreCase(cmd2)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	     

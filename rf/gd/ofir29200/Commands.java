@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
 
-import net.minecraft.server.v1_8_R3.CommandExecute;
+import net.minecraft.server.v1_8_R2.CommandExecute;
 
 public class Commands extends CommandExecute implements Listener,CommandExecutor {
 

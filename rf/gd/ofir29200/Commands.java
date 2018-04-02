@@ -16,7 +16,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd3 = "override";
 	public static String cmd4 = "apply";
 	public static String cmd5 = "join-discord";
-	//public String cmd6 = "for later on";
+	public static String cmd6 = "stop";
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
 	    boolean returnAnswer = false;
@@ -97,14 +97,9 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	        	  player.sendMessage(ChatColor.RED + "This operation has FAILED for " + player.getCustomName() + "!");
 	          }
 	      }
-	      else
-	      {
-	    	  Player player = (Player)sender;
-			player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
-	      }
 	            returnAnswer = true;
 		  
-		  if 	((cmd.getName().equalsIgnoreCase(cmd4)) && ((sender instanceof Player)))
+		  if ((cmd.getName().equalsIgnoreCase(cmd4)) && ((sender instanceof Player)))
 	    {
 	      Player player = (Player)sender;
 	      
@@ -121,8 +116,22 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		      
 			  returnAnswer = true;
 		    }
-		  
-	    return returnAnswer;
+
+		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
+		    {
+		      Player player = (Player)sender;
+		      
+		      if (player.hasPermission("admin.shutdown")) {
+		    	   player.sendMessage("the server is now sutting down");
+		    	   returnAnswer = true;	
+		    	} 
+		      else {
+		    	   player.sendMessage(ChatColor.RED + "you dont have the right perms to use the command");
+		    	   returnAnswer = false;	
+		    	}
+
+	    
+		    }
+		  return returnAnswer;
 	  }
-	
 }

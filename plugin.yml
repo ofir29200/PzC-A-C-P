@@ -18,3 +18,6 @@ commands:
    join-discord:
       description: get a link to join our discord server
       usage: /join-discord
+   stop:
+      description: admin command (not for players)
+      usage: /stop

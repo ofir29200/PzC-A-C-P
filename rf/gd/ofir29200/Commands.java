@@ -120,7 +120,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
 		    {
 		      Player player = (Player)sender;
-		      
+		      player.sendMessage("this is before the if");
 		      if (player.hasPermission("admin.shutdown")) {
 		    	   player.sendMessage("the server is now sutting down");
 		    	   returnAnswer = true;	
@@ -129,7 +129,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		    	   player.sendMessage(ChatColor.RED + "you dont have the right perms to use the command");
 		    	   returnAnswer = true;	
 		    	}
-
+		      player.sendMessage("this is after the if");
 	    
 		    }
 		  return returnAnswer;

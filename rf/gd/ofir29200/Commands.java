@@ -1,8 +1,10 @@
 package rf.gd.ofir29200;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
@@ -119,19 +121,22 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 
 		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
 		    {
-		      Player player = (Player)sender;
-		      player.sendMessage("this is before the if");
-		      if (player.hasPermission("admin.shutdown")) {
-		    	   player.sendMessage("the server is now sutting down");
-		    	   returnAnswer = true;	
+			  	if (sender instanceof ConsoleCommandSender){
+			  		Bukkit.broadcastMessage("the server is now restarting...");
+			    	   for(Player player : Bukkit.getOnlinePlayers()) {
+			    		    player.kickPlayer(ChatColor.GREEN + "the server is restarting");
+			  	}
+			  	if (sender instanceof Player) {
+			  		Player player = (Player)sender;
+				      
+					  player.sendMessage(ChatColor.RED + "This Command has been Disabled!");
+					  returnAnswer = true;	
+			  	}
+		    	   
+		    		}
+		    	  
 		    	} 
-		      else {
-		    	   player.sendMessage(ChatColor.RED + "you dont have the right perms to use the command");
-		    	   returnAnswer = true;	
-		    	}
-		      player.sendMessage("this is after the if");
-	    
-		    }
+
 		  return returnAnswer;
 	  }
 }

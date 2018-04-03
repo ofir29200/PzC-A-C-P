@@ -1,5 +1,7 @@
 package rf.gd.ofir29200;
 
+import java.util.Collection;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -122,15 +124,14 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		    {
 		        if (sender.isOp()) {
 		     		Bukkit.broadcastMessage("the server is now restarting...");
-			    	   for(Player player : Bukkit.getOnlinePlayers()) {
-			    		    player.kickPlayer(ChatColor.GREEN + "the server is restarting");
+		     				Collection<? extends Player> player = Bukkit.getOnlinePlayers();
+			    		    ((Player) player).kickPlayer(ChatColor.GREEN + "the server is restarting");
 			    		    returnAnswer = true;
 			    		    return true;
 			    	   	}
 		    	   
 		    		}
 		    	  
-		    	} 
 
 		  return returnAnswer;
 	  }

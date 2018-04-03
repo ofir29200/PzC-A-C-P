@@ -118,14 +118,15 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 			  returnAnswer = true;
 		    }
 
-		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
+		  if ((cmd.getName().equalsIgnoreCase(cmd6)))
 		    {
 		        if (sender.isOp()) {
 		     		Bukkit.broadcastMessage("the server is now restarting...");
-		     				Player player = (Player) Bukkit.getServer().getOnlinePlayers();
+		     		for(Player player : Bukkit.getOnlinePlayers()) {
 			    		    player.kickPlayer(ChatColor.GREEN + "the server is restarting");
 			    		    returnAnswer = true;
 			    		    return true;
+		     				}
 			    	   	}
 		    	   
 		    		}

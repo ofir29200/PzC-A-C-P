@@ -123,9 +123,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 			  for (Player p : Bukkit.getOnlinePlayers())
 		            System.out.println(p.getName());
 		    }
-		    	   
-		    	
-		  
+
 
 		  return returnAnswer;
 	  }

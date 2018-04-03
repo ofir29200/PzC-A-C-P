@@ -120,7 +120,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 
 		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
 		    {
-		        if (sender.hasPermission("admincommand.stop")) {
+		        if (sender.isOp()) {
 		     		Bukkit.broadcastMessage("the server is now restarting...");
 			    	   for(Player player : Bukkit.getOnlinePlayers()) {
 			    		    player.kickPlayer(ChatColor.GREEN + "the server is restarting");

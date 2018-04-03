@@ -120,7 +120,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 
 		  if ((cmd.getName().equalsIgnoreCase(cmd6)))
 		    {
-		        if (sender.hasPermission("admincommand.stop")) {
+		        // if (sender.hasPermission("admincommand.stop")) {
 		     		Bukkit.broadcastMessage("the server is now restarting...");
 		     		for(Player player : Bukkit.getOnlinePlayers()) {
 			    		    player.kickPlayer(ChatColor.GREEN + "the server is restarting");
@@ -129,7 +129,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		     				}
 			    	   	}
 		    	   
-		    		}
+		    	//	}
 		    	  
 
 		  return returnAnswer;

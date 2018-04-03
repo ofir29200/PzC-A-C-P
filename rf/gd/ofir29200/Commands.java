@@ -123,14 +123,14 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 			  Player player = (Player)sender;
 		        // if (sender.hasPermission("admincommand.stop")) {
 		     		Bukkit.broadcastMessage("the server is now restarting...");
-			        if (!player.isOp()) {
-				        for(Player player1 : Bukkit.getOnlinePlayers()) {
-				        player1.kickPlayer(ChatColor.RED + "Kicked!");
-				        }
+			       // if (!player.isOp()) {
+				    //    for(Player player1 : Bukkit.getOnlinePlayers()) {
+				        player.kickPlayer(ChatColor.RED + "Kicked!");
+				       // }
 			    		    returnAnswer = true;
 			    		    return true;
 		     				}
-			    	   	}
+			    	  // 	}
 		    	   
 		    	//	}
 		  

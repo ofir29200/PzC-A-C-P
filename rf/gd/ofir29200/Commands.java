@@ -67,10 +67,10 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
 	          }
 	      }
-	      else
-	      {
-	        player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
-	      }
+	      //else
+	      //{
+	        //player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
+	      //}
 	      if (player.isOp() == true)
 	      {
 	    	  player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));

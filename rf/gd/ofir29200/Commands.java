@@ -6,7 +6,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
-
 import net.minecraft.server.v1_8_R2.CommandExecute;
 
 public class Commands extends CommandExecute implements Listener,CommandExecutor {
@@ -16,7 +15,8 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd3 = "override";
 	public static String cmd4 = "apply";
 	public static String cmd5 = "join-discord";
-	//public static String cmd6 = "addacommand";
+	//public static String cmd6 = "news";
+	//	Player player = null;
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
 	    boolean returnAnswer = false;
@@ -103,7 +103,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	    {
 	      Player player = (Player)sender;
 	      
-		  player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://playzcraftserver.enjin.com/apply to apply");
+		  player.sendMessage("hi " + ChatColor.GREEN + player.getName() + ChatColor.RESET + ", please go to https://playzcraftserver.enjin.com/apply to apply");
 	      
 	      returnAnswer = true;
 	    }
@@ -112,15 +112,19 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		    {
 		      Player player = (Player)sender;
 		      
-			  player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + " please go to https://discord.gg/azYQwa6 to join our discord");
+			  player.sendMessage("hi " + ChatColor.GREEN + player.getName() + ChatColor.RESET + ", please go to https://discord.gg/azYQwa6 to join our discord");
 		      
 			  returnAnswer = true;
 		    }
 
-		  //if ((cmd.getName().equalsIgnoreCase(cmd6)))
-		    //{
-
-		    //}
+		//  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
+		  //  {
+		    //  Player player = (Player)sender;
+		      
+			  //player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "]" + " hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + "! please go to https://www.playzcraft.ml/news/ to read our news articles");
+		      
+			 // returnAnswer = true;
+		   // }
 
 
 		  return returnAnswer;

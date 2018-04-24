@@ -1,7 +1,7 @@
 name: Admin_Commands
 author: Ofir Aviel
 main: rf.gd.ofir29200.Admin_Commands
-version: 3.0
+version: 5.0
 commands:
    lag:
       description: check you lag with the server
@@ -18,6 +18,6 @@ commands:
    join-discord:
       description: get a link to join our discord server
       usage: /join-discord
-   stop:
-      description: admin command (not for players)
-      usage: /stop
+   news:
+      description: get a link to get to our news webpage
+      usage: /news

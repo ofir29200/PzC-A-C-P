@@ -1,6 +1,5 @@
 package rf.gd.ofir29200;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,7 +16,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd3 = "override";
 	public static String cmd4 = "apply";
 	public static String cmd5 = "join-discord";
-	public static String cmd6 = "stop";
+	//public static String cmd6 = "addacommand";
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
 	    boolean returnAnswer = false;
@@ -118,11 +117,10 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 			  returnAnswer = true;
 		    }
 
-		  if ((cmd.getName().equalsIgnoreCase(cmd6)))
-		    {
-			  for (Player p : Bukkit.getOnlinePlayers())
-		            System.out.println(p.getName());
-		    }
+		  //if ((cmd.getName().equalsIgnoreCase(cmd6)))
+		    //{
+
+		    //}
 
 
 		  return returnAnswer;

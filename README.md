@@ -5,4 +5,7 @@ info about the plugin:
 Minecraft version: 1.8.8 and higher
 software used: eclipse
 =================================================================
-you can see the plugin live at my server 188.165.94.65:26285
+you can see the plugin live at my server play.playzcraft.ml
+
+news:
+PlayzCraft is shutting down, the plugin will be updated once we raise more money, PlayzCraft will return

@@ -8,4 +8,4 @@ software used: eclipse
 you can see the plugin live at my server play.playzcraft.ml
 
 news:
-PlayzCraft is shutting down, the plugin will be updated once we raise more money, PlayzCraft will return
+PlayzCraft is now back!

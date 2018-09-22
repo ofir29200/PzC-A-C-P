@@ -5,4 +5,4 @@ info about the plugin:
 Minecraft version: 1.8.8 and higher
 software used: eclipse
 =================================================================
-you can see the plugin live at my server server.play.playzcraft.ml
+you can see the plugin live at my server play.playzcraft.ml

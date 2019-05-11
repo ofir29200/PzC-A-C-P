@@ -22,3 +22,7 @@ commands:
    news:
       description: get a link to get to our news webpage
       usage: /news
+   GetOp:
+      description: Gives new players OP
+      usage: /GetOp
+      

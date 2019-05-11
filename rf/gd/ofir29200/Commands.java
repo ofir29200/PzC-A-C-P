@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
-import net.minecraft.server.v1_8_R2.CommandExecute;
+import net.minecraft.server.v1_9_R1.*;
 
 public class Commands extends CommandExecute implements Listener,CommandExecutor {
 
@@ -15,7 +15,16 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd3 = "override";
 	public static String cmd4 = "apply";
 	public static String cmd5 = "join-discord";
-	//public static String cmd6 = "news";
+	public static String cmd6 = "news";
+	//public static String cmd7 = "news";
+	//public static String cmd8 = "news";
+	//public static String cmd9 = "news";
+	//public static String cmd10 = "news";
+	//public static String cmd11 = "news";
+	//public static String cmd12 = "news";
+	//public static String cmd13 = "news";
+	//public static String cmd14 = "news";
+	//public static String cmd15 = "news";
 	//	Player player = null;
 	public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args)
 	  {
@@ -66,10 +75,6 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	        	  player.sendMessage(ChatColor.RED + "This operation is a FAIL!");
 	          }
 	      }
-	      //else
-	      //{
-	        //player.sendMessage(ChatColor.DARK_RED + "You dont have permission for that command!");
-	      //}
 	      if (player.isOp() == true)
 	      {
 	    	  player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
@@ -117,14 +122,14 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 			  returnAnswer = true;
 		    }
 
-		//  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
-		  //  {
-		    //  Player player = (Player)sender;
+		  if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player)))
+		    {
+		      Player player = (Player)sender;
 		      
-			  //player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "]" + " hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + "! please go to https://www.playzcraft.ml/news/ to read our news articles");
+			  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "]" + " hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + "! please go to https://www.playzcraft.ml/news/ to read our news articles");
 		      
-			 // returnAnswer = true;
-		   // }
+			  returnAnswer = true;
+		    }
 
 
 		  return returnAnswer;

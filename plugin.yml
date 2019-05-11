@@ -1,7 +1,8 @@
 name: Admin_Commands
+description: PlayzCraft Custom Admin Plugin
 author: Ofir Aviel
 main: rf.gd.ofir29200.Admin_Commands
-version: 5.0
+version: 7.0
 commands:
    lag:
       description: check you lag with the server
@@ -11,7 +12,7 @@ commands:
       usage: /shutdown
    override:
       description: admin command (not for players)
-      usage: /override on/off
+      usage: /override [Key]
    apply:
       description: get a link to apply to the server
       usage: /apply

@@ -17,7 +17,7 @@ public class Admin_Commands extends org.bukkit.plugin.java.JavaPlugin {
 	getCommand(Commands.cmd5).setExecutor(commands);
 	getCommand(Commands.cmd6).setExecutor(commands);
 	getCommand(Commands.cmd7).setExecutor(commands);
-	//getCommand(Commands.cmd8).setExecutor(commands);
+	getCommand(Commands.cmd8).setExecutor(commands);
 	//getCommand(Commands.cmd9).setExecutor(commands);
 	//getCommand(Commands.cmd10).setExecutor(commands);
 	//getCommand(Commands.cmd11).setExecutor(commands);

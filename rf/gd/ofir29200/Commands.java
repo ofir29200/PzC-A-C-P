@@ -1,12 +1,15 @@
 package rf.gd.ofir29200;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
 import net.minecraft.server.v1_9_R1.*;
+import org.bukkit.inventory.ItemStack;
+
 
 public class Commands extends CommandExecute implements Listener,CommandExecutor {
 
@@ -17,7 +20,8 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd5 = "join-discord";
 	public static String cmd6 = "news";
 	public static String cmd7 = "GetOp";
-	//public static String cmd8 = "news";
+	public static String cmd8 = "Tree";
+	public static String tree = "6";
 	//public static String cmd9 = "news";
 	//public static String cmd10 = "news";
 	//public static String cmd11 = "news";
@@ -144,6 +148,20 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "You already have op!");
 	          }
 		      
+			  returnAnswer = true;
+		    }
+		  if ((cmd.getName().equalsIgnoreCase(cmd8)) && ((sender instanceof Player)))
+		    {
+		      Player player = (Player)sender;
+		      player.getInventory().addItem(new ItemStack(Material.SAPLING, 1));
+        	  player.sendMessage(ChatColor.GREEN + "Go and Plant this tree!");
+		      player.getInventory().addItem(new ItemStack(Material.BONE, 100));
+        	  player.sendMessage(ChatColor.RED + "Don't forget to convert the bones to Bone Meal to grow the tree faster!");
+        	  if (player.hasPlayedBefore() == true) {
+            	  player.setFlying(true);  
+            	  player.getInventory().addItem(new ItemStack(Material.SAPLING, 1));
+            	  player.sendMessage(ChatColor.GREEN + "here is another tree for you!");
+        	  }
 			  returnAnswer = true;
 		    }
 

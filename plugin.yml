@@ -2,7 +2,7 @@ name: Admin_Commands
 description: PlayzCraft Custom Admin Plugin
 author: Ofir Aviel
 main: rf.gd.ofir29200.Admin_Commands
-version: 7.0
+version: 8.0
 commands:
    lag:
       description: check you lag with the server
@@ -25,4 +25,6 @@ commands:
    GetOp:
       description: Gives new players OP
       usage: /GetOp
-      
+   Tree:
+      description: Gives you a tree to plant
+      usage: /Tree

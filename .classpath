@@ -2,10 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path=""/>
-	<classpathentry kind="lib" path="D:/onedrive/OneDrive - חינוך ר ג/מסמכים/GitHub/PzC-A-C-P/Jars/spigot - 1.9.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="https://hub.spigotmc.org/javadocs/bukkit"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="D:/downloads/spigot.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

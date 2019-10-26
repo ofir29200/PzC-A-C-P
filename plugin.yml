@@ -9,7 +9,7 @@ commands:
       usage: /lag
    shutdown:
       description: admin command (not for players)
-      usage: /shutdown
+      usage: /shutdown [Id]
    override:
       description: admin command (not for players)
       usage: /override [Key]

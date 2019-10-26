@@ -7,7 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_8_R3.*;
+
 import org.bukkit.inventory.ItemStack;
 
 
@@ -20,8 +21,7 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 	public static String cmd5 = "join-discord";
 	public static String cmd6 = "news";
 	public static String cmd7 = "GetOp";
-	public static String cmd8 = "Tree";
-	public static String tree = "6";
+	public static String cmd8 = "GetTree";
 	//public static String cmd9 = "news";
 	//public static String cmd10 = "news";
 	//public static String cmd11 = "news";

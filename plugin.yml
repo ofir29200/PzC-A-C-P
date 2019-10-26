@@ -25,6 +25,6 @@ commands:
    GetOp:
       description: Gives new players OP
       usage: /GetOp
-   Tree:
+   GetTree:
       description: Gives you a tree to plant
       usage: /Tree

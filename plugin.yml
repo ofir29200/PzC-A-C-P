@@ -2,29 +2,20 @@ name: Admin_Commands
 description: PlayzCraft Custom Admin Plugin
 author: Ofir Aviel
 main: rf.gd.ofir29200.Admin_Commands
-version: 8.0
+version: 9.0
 commands:
    lag:
       description: check you lag with the server
       usage: /lag
    shutdown:
       description: admin command (not for players)
-      usage: /shutdown [Id]
+      usage: /shutdown [OTP Key]
    override:
       description: admin command (not for players)
-      usage: /override [Key]
-   apply:
-      description: get a link to apply to the server
-      usage: /apply
-   join-discord:
+      usage: /override [ID Number]
+   discord:
       description: get a link to join our discord server
-      usage: /join-discord
+      usage: /discord
    news:
       description: get a link to get to our news webpage
       usage: /news
-   GetOp:
-      description: Gives new players OP
-      usage: /GetOp
-   GetTree:
-      description: Gives you a tree to plant
-      usage: /Tree

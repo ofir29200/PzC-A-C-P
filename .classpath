@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_261">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path=""/>
-	<classpathentry kind="lib" path="D:/downloads/spigot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ofir2/Downloads/spigot.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

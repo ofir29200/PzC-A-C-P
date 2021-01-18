@@ -5,4 +5,4 @@ info about the plugin:
 Minecraft version: 1.9
 software used: eclipse
 =================================================================
-you can see the plugin live at my server mc.ofir29200.xyz
+

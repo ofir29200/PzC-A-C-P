@@ -1,8 +1,8 @@
-# PlayzCraft Admin Commands
-This is the plugin i used on My PlayzCraft Network
-=================================================================
-info about the plugin:
-Minecraft version: 1.9 (1.18 coming soon)
-software used: eclipse (now using IntelliJ IDEA Community Edition)
-=================================================================
-
+# PlayzCraft Admin Commands <br />
+This is the plugin i used on My PlayzCraft Network <br />
+================================================================= <br />
+info about the plugin: <br />
+Minecraft version: 1.9 (1.18 coming soon) <br />
+software used: eclipse (now using IntelliJ IDEA Community Edition) <br />
+================================================================= <br />
+<br />

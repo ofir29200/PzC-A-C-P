@@ -1,0 +1,23 @@
+name: Admin_Commands
+version: '${project.version}'
+main: xyz.ofir29200.playzcraft.Admin_Commands
+api-version: 1.18
+authors: [ ofir29200 ]
+description: PlayzCraft Custom Admin Plugin
+website: https://playzcraft.ofir29200.xyz/
+commands:
+  lag:
+    description: check you lag with the server
+    usage: /lag
+  shutdown:
+    description: admin command (not for players)
+    usage: /shutdown [OTP Key]
+  override:
+    description: admin command (not for players)
+    usage: /override [ID Number]
+  discord:
+    description: get a link to join our discord server
+    usage: /discord
+  news:
+    description: get a link to get to our news webpage
+    usage: /news

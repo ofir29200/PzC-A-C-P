@@ -83,5 +83,6 @@
             <artifactId>spigot</artifactId>
             <version>1.18.1-R0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 </project>

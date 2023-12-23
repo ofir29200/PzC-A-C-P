@@ -1,10 +1,10 @@
 name: Admin_Commands
 version: '${project.version}'
 main: xyz.ofir29200.playzcraft.Admin_Commands
-api-version: 1.18
+api-version: 1.17
 authors: [ ofir29200 ]
 description: PlayzCraft Custom Admin Plugin
-website: https://playzcraft.ofir29200.xyz/
+website: https://www.ofir29200.com/
 commands:
   lag:
     description: check you lag with the server
@@ -21,3 +21,6 @@ commands:
   news:
     description: get a link to get to our news webpage
     usage: /news
+  ping:
+    description: admin command (not for players)
+    usage: /ping [key] [player]

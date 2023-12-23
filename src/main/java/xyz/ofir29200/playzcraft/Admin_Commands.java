@@ -1,13 +1,14 @@
 package xyz.ofir29200.playzcraft;
 
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.*;
 
 public final class Admin_Commands extends JavaPlugin {
 
     private Commands commands = new Commands();
     @Override
     public void onEnable() {
+
         // Plugin startup logic
         getLogger().info("The plugin is now starting up!");
         getCommand(Commands.cmd1).setExecutor(commands);

